@@ -33,3 +33,33 @@
     height: 100%;
     object-fit: cover;
   }
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.text {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  background: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  background: #0056b3;
+}
