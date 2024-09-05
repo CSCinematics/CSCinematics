@@ -12,7 +12,7 @@ if (hamburger && navLinks) {
 var swiper1 = new Swiper(".mySwiper1", {
   centeredSlides: true,
   autoplay: {
-    delay: 10000,
+    delay: 6000,
     disableOnInteraction: false,
   },
   pagination: {
