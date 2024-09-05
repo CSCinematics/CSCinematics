@@ -81,3 +81,67 @@ gsap.registerPlugin(ScrollTrigger);
         });
     });
 
+
+// gsap scroll animations
+
+gsap.from(".hero-content",{
+    scale:0,
+    opacity:.7,
+    transform:"translateY(-230px)",
+    scrollTrigger:{
+        trigger: ".hero-content",
+        scroller: "body",
+        start: "top 65%",
+        end: "top 20%",
+        scrub: 2,
+    }
+})
+
+gsap.from(".social-media a ",{
+    scale:0,
+    opacity:0,
+    duration:1,
+    transform:"translateX(-100%)",
+    scrollTrigger:{
+        trigger: ".social-media a ",
+        scroller: "body",
+        start: "top 90%",
+        end: "top 55%",
+        scrub: 2,
+        markers:true,
+    }
+})
+
+gsap.from("#contact-form button",{
+    scale:1.1,        
+    duration:1, transform:"translateX(-150%)",
+    scrollTrigger:{
+        trigger: "#contact button",
+        scroller: "body",
+        start: "top 90%",
+        end: "top 75%",
+        scrub: 2,
+    }
+})
+
+
+gsap.to(".album h1",{
+    transform:"translateX(-150%)",
+    scrollTrigger:{
+        trigger: ".album h1",
+        scroller: "body",
+        start: "top 0%",
+        end: "top -100%",
+        scrub: 2,
+        pin:true,
+    }
+})
+
+gsap.to(".video-container iframe",{
+    scale:1.06,
+    
+})
+
+
+
+
