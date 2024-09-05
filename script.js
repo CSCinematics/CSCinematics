@@ -108,7 +108,7 @@ gsap.from(".social-media a ",{
         start: "top 90%",
         end: "top 55%",
         scrub: 2,
-        markers:true,
+        
     }
 })
 
