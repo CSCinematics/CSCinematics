@@ -93,6 +93,7 @@ gsap.from(".hero-content",{
         start: "top 65%",
         end: "top 20%",
         scrub: 2,
+        marker: true,
     }
 })
 
