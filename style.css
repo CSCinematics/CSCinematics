@@ -12,6 +12,7 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+    overflow-x:hidden;
 }
 
 /* Navbar Styles */
@@ -146,7 +147,7 @@ top: 0;
 /* Hero Section */
 .hero {
     position: relative;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,16 +261,34 @@ p {
 iframe {
     width: 100%;
     max-width: 560px;
-    height: 315px;
+    height: 150px;
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/*album*/
+
+.album{
+    height:100%;
+    width:100%;
+}
+.album h1{
+    font-size:50vw;
+    text-align:center;
+}
 /* Contact Section */
 #contact h2{
     font-size: 2rem;
+    padding-top: 20px;
     padding: 10px 10px;
-    margin-botton:2rem;
+    margin-bottom:2rem;
+}
+#contact h2 span{
+    color: #ff6347;
+    box-shadow: 0 0 1rem #ff4500;
+    background:transparent;
+    
+    
 }
 #contact p{
     font-size: 1.2rem;
@@ -278,7 +297,7 @@ iframe {
 #contact form {
     padding:20px;
     display: flex;
-    height:60vh;
+    height:70vh;
     flex-direction: column;
     max-width: 600px;
     margin: auto;
@@ -295,49 +314,60 @@ iframe {
     
     padding: 10px;
     cursor: pointer;
-      border: .4rem solid #ff6347;
-      font-size: 2rem;
+      border: .3rem solid #ff6347;
+      font-size: 1rem;
     background: transparent;
-      border-radius: 2rem;
+      border-radius: 1rem;
       color: #ff6347;
-      margin: 3rem 1.5rem 3rem 0;
+      margin: 3rem 1.7rem 3rem 0;
       transition: .5s ease;
 }
 
 #contact button:hover {
-    background: #ff4500;
+    background: #ff6347;
       color: #1f242d;
-      box-shadow: 0 0 1rem #ff4500;
+      box-shadow: 0 0 1rem #ff6347;
+    border: .4rem solid #ff6347;
 }
-
+.social-media {
+    padding-left:10px;
+}
 .social-media a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background: transparent;
   border: .2rem solid #ff6347;
   border-radius: 50%;
   font-size: 2rem;
   color: #ff6347;
-  margin: 3rem 1.5rem 3rem 0;
+  margin: 2rem 1.5rem 3rem 0;
   transition: .5s ease;
 }
 
 .social-media a:hover {
-  background: #ff4500;
+  background-color: #ff4500;
   color: #1f242d;
   box-shadow: 0 0 1rem #ff4500;
+  border: .4rem solid #ff4500;
+  scale: 1.2;
 }
 
 /* Footer */
 footer {
     background-color: #333;
+    align-items:center;
+    justify-content:center;
+    height: 30px;
     color: #fff;
-    font-size:1rem;
+    font-size: 10px;
     text-align: center;
     padding: 10px;
     width: 100%;
     bottom: 0;
+}
+footer p{
+    font-size:1rem;
 }
