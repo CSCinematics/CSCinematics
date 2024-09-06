@@ -99,7 +99,7 @@ gsap.from(".hero-content",{
 gsap.from(".social-media a ",{
     scale:0,
     opacity:0,
-    duration:1,
+    duration:2,
     transform:"translateX(-100%)",
     scrollTrigger:{
         trigger: ".social-media a ",
@@ -112,14 +112,16 @@ gsap.from(".social-media a ",{
 })
 
 gsap.from("#contact-form button",{
-    scale:1.1,        
-    duration:1, transform:"translateX(-150%)",
+        
+    duration:1,
+    transform:"translateX(-50%)",
     scrollTrigger:{
-        trigger: "#contact button",
+        trigger: "#contact-form button",
         scroller: "body",
         start: "top 90%",
         end: "top 75%",
         scrub: 2,
+        marker: true,
     }
 })
 
@@ -138,8 +140,11 @@ gsap.to(".album h1",{
 
 gsap.to(".video-container iframe",{
     scale:1.06,
+    duration: 1,
     
 })
+
+
 
 
 
