@@ -121,7 +121,7 @@ gsap.from("#contact-form button",{
         start: "top 90%",
         end: "top 75%",
         scrub: 2,
-        marker: true,
+        
     }
 })
 
