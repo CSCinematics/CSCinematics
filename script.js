@@ -12,7 +12,7 @@ if (hamburger && navLinks) {
 var swiper1 = new Swiper(".mySwiper1", {
   centeredSlides: true,
   autoplay: {
-    delay: 6000,
+    delay: 10000,
     disableOnInteraction: false,
   },
   pagination: {
@@ -81,7 +81,6 @@ gsap.registerPlugin(ScrollTrigger);
         });
     });
 
-
 // gsap scroll animations
 
 gsap.from(".hero-content",{
@@ -141,7 +140,6 @@ gsap.to(".video-container iframe",{
     scale:1.06,
     
 })
-
 
 
 
