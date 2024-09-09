@@ -37,8 +37,8 @@ top: 0;
 .nav-links {
     list-style: none;
     display: flex;
+    width:100%;
     padding: 0px 10px;
-    margin-left: 40%;
     transition: all 0.3s ease-in-out;
 }
 
@@ -98,6 +98,9 @@ top: 0;
 
     .nav-links.active {
         display: flex;
+        flex-direction: column;
+        width : 100%;
+        background-color: #e5533d;
     }
     .hamburger .bar {
         display: block;
@@ -261,10 +264,84 @@ p {
 iframe {
     width: 100%;
     max-width: 760px;
-    height: 250px;
+    height: 300px;
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/*Our work*/
+.container {
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container h2 {
+    padding: 30px 0px;
+    font-size: 30px;
+    margin: auto;
+}
+.container h2 span{
+    color: #ff6347;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #555;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.video-item {
+    position: relative;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video-item:hover .overlay {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
 }
 /*album*/
 
@@ -275,6 +352,7 @@ iframe {
 .album h1{
     font-size:50vw;
     text-align:center;
+    color:#ff6347;
 }
 /* Contact Section */
 #contact{
