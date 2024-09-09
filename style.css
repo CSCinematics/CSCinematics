@@ -320,17 +320,7 @@ iframe {
 .hidden {
     display: none;
 }
-/*album*/
 
-.album{
-    height:100%;
-    width:100%;
-}
-.album h1{
-    font-size:50vw;
-    text-align:center;
-    color:#ff6347;
-}
 /* Contact Section */
 #contact{
     background-color: #1f242d;
