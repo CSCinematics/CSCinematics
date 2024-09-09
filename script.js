@@ -45,6 +45,51 @@ var swiper2 = new Swiper(".mySwiper2", {
     },
   },
 });
+function playVideo(iframe) {
+  const videoId = iframe.getAttribute('data-id');
+  const iframeUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
+
+  // Create a new iframe with fullscreen support
+  const newIframe = document.createElement('iframe');
+  newIframe.src = iframeUrl;
+  newIframe.frameBorder = '0';
+  newIframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+  newIframe.allowFullscreen = true;
+  newIframe.style.width = '100%';
+  newIframe.style.height = '100%';
+
+  // Replace existing iframe with the new one
+  const container = iframe.parentNode;
+  container.innerHTML = ''; // Clear existing content
+  container.appendChild(newIframe);
+
+  // Request fullscreen
+  if (newIframe.requestFullscreen) {
+      newIframe.requestFullscreen();
+  } else if (newIframe.mozRequestFullScreen) { /* Firefox */
+      newIframe.mozRequestFullScreen();
+  } else if (newIframe.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+      newIframe.webkitRequestFullscreen();
+  } else if (newIframe.msRequestFullscreen) { /* IE/Edge */
+      newIframe.msRequestFullscreen();
+  }
+}
+
+
+function filterVideos(category) {
+    const items = document.querySelectorAll('.video-item');
+    if (category === 'all') {
+        items.forEach(item => item.classList.remove('hidden'));
+    } else {
+        items.forEach(item => {
+            if (item.classList.contains(category)) {
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
+            }
+        });
+    }
+}
 
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
@@ -93,7 +138,6 @@ gsap.from(".hero-content",{
         start: "top 65%",
         end: "top 20%",
         scrub: 2,
-        marker: true,
     }
 })
 
@@ -122,7 +166,7 @@ gsap.from("#contact-form button",{
         start: "top 90%",
         end: "top 75%",
         scrub: 2,
-        
+        marker: true,
     }
 })
 
