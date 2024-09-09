@@ -1,12 +1,12 @@
-// Toggle navigation for mobile view
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+// Handle hamburger menu click
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.add('active');
+});
 
-if (hamburger && navLinks) { 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-}
+// Handle close button click
+document.querySelector('.close-btn').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.remove('active');
+});
 
 // Initialize the first Swiper
 var swiper1 = new Swiper(".mySwiper1", {
