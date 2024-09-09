@@ -171,18 +171,6 @@ gsap.from("#contact-form button",{
 })
 
 
-gsap.to(".album h1",{
-    transform:"translateX(-150%)",
-    scrollTrigger:{
-        trigger: ".album h1",
-        scroller: "body",
-        start: "top 0%",
-        end: "top -100%",
-        scrub: 2,
-        pin:true,
-    }
-})
-
 gsap.to(".video-container iframe",{
     scale:1.06,
     duration: 1,
