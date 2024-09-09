@@ -130,7 +130,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".hero-content",{
     scale:0,
-    opacity:.7,
+    opacity:0,
     transform:"translateY(-230px)",
     scrollTrigger:{
         trigger: ".hero-content",
