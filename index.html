@@ -211,5 +211,26 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script>
+       // Function to make video fullscreen when clicked
+    function playVideo(iframe) {
+        const videoElement = iframe;
+        
+        // Play the video if not already playing
+        const videoSrc = videoElement.src;
+        videoElement.src = videoSrc + '&autoplay=1';
+        
+        // Enter fullscreen mode
+        if (videoElement.requestFullscreen) {
+            videoElement.requestFullscreen();
+        } else if (videoElement.mozRequestFullScreen) { // Firefox
+            videoElement.mozRequestFullScreen();
+        } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+            videoElement.webkitRequestFullscreen();
+        } else if (videoElement.msRequestFullscreen) { // IE/Edge
+            videoElement.msRequestFullscreen();
+        }
+    }
+    </script>
 </body>
 </html>
