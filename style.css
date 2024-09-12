@@ -16,6 +16,7 @@ body {
 }
 
 /* Navbar Styles */
+
 .navbar {
     position: sticky;
     top: 0;
@@ -27,17 +28,20 @@ body {
     padding: 0 20px;
     z-index: 1000;
 }
+    
+
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    margin-left: 50px;
 }
 
 .logo img {
     width: 30px;
     height: 25px;
 }
-
+/* Desktop Styles */
 .nav-links {
     display: flex;
     margin: 0; /* Reset margin */
@@ -58,6 +62,14 @@ body {
     color: #ff6347;
 }
 
+.nav-links li {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.nav-links.active {
+    display: flex;
+}
 /* Hamburger Menu Styles */
 .hamburger {
     display: none; /* Hidden by default on desktop */
@@ -112,17 +124,60 @@ body {
     object-fit: cover;
 }
 
-.nav-links li {
-    text-align: center;
-    margin: 15px 0;
-}
+
 
 .hamburger {
     display: flex;
 }
 
-.nav-links.active {
+
+
+/* sticky whatsapp call logo */
+
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.floating-buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff6347; /* WhatsApp green */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    color: white;
+    font-size: 36px; /* Icon size */
+}
+
+.floating-buttons a:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    background: #ff6347;
+    color: #1f242d;
+    box-shadow: 0 0 1rem #ff6347;
+  border: .4rem solid #ff6347;
+
+}
+
+.whatsapp-button {
+    background-color: #25D366; /* WhatsApp color */
+}
+
+.call-button {
+    background-color: #34b7f1; /* Call button color */
+}
+
+.floating-buttons i {
+    font-size: 30px; /* Adjust icon size */
+
 }
 /* Hero Section */
 .hero {
@@ -198,13 +253,12 @@ p {
 .service {
     background: url ("img1.jpg");
     padding: 2rem;
-    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .service h2 {
-    font-size: 1.7rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: #333;
 }
@@ -221,8 +275,7 @@ p {
     background-color: #ff6347;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: background-color 0.3s ease;
     margin-bottom: 1.5rem;
 }
@@ -240,8 +293,8 @@ p {
 
 iframe {
     width: 100%;
-    max-width: 760px;
-    height: 300px;
+    max-width: 1000px;
+    height: 470px;
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -463,12 +516,12 @@ footer p{
     .nav-links {
         display: none; /* Hidden by default */
         flex-direction: column;
-        width: 100vw; /* Full viewport width */
+        width: 34vw; /* Full viewport width */
         height: 100vh; /* Full viewport height */
-        background-color: #333;
+    
         position: fixed; /* Fixed position to overlay content */
         top: 0; /* Align to the top */
-        left: 0; /* Align to the left */
+        right: 0; /* Align to the left */
         z-index: 1000; /* Ensure it is above other content */
         padding-top: 60px; /* Adjust spacing if needed */
         box-sizing: border-box; /* Ensure padding is included in width/height */
@@ -476,14 +529,17 @@ footer p{
 
     .nav-links.active {
         display: flex; /* Show when active */
-        background-color: #e5533d; /* Background color for active menu */
+        background-color: #fdfbfb; /* Background color for active menu */
     }
 
     .nav-links a {
-        color: #fff; /* Text color for mobile menu */
+        color: black; /* Text color for mobile menu */
         margin: 25px 0; /* Space between items */
         text-align: center; /* Center text */
         display: block; /* Make links block-level */
+    }
+    nav-links li{
+        list-style: none;
     }
 
     .hamburger {
@@ -495,7 +551,8 @@ footer p{
     }
 
     .close-btn {
-        display: block; /* Show close button when menu is active */
+        display: block;
+        color:#000; /* Show close button when menu is active */
     }
 
     .logo img {
