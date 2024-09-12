@@ -91,6 +91,36 @@ function filterVideos(category) {
     }
 }
 
+// JavaScript to handle Show More functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const videosToShow = 3; // Number of videos to show initially
+    let videosShown = videosToShow;
+
+    // Initially display only the top 3 videos
+    const videoItems = document.querySelectorAll('.video-item');
+    videoItems.forEach((video, index) => {
+        if (index < videosToShow) {
+            video.classList.add('show');
+        }
+    });
+
+    // Show more videos when the button is clicked
+    document.getElementById('show-more-btn').addEventListener('click', function() {
+        let hiddenVideos = [...videoItems].slice(videosShown, videosShown + videosToShow);
+
+        hiddenVideos.forEach(video => {
+            video.classList.add('show'); // Reveal more videos
+        });
+
+        videosShown += videosToShow;
+
+        // Hide the Show More button when all videos are shown
+        if (videosShown >= videoItems.length) {
+            document.getElementById('show-more-btn').style.display = 'none';
+        }
+    });
+});
+
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,7 +160,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".hero-content",{
     scale:0,
-    opacity:0,
+    opacity:.7,
     transform:"translateY(-230px)",
     scrollTrigger:{
         trigger: ".hero-content",
