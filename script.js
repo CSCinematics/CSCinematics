@@ -75,7 +75,7 @@ function playVideo(iframe) {
   }
 }
 
-
+/*filtering function*/
 function filterVideos(category) {
     const items = document.querySelectorAll('.video-item');
     if (category === 'all') {
@@ -93,7 +93,7 @@ function filterVideos(category) {
 
 // JavaScript to handle Show More functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const videosToShow = 3; // Number of videos to show initially
+    const videosToShow = 6; // Number of videos to show initially
     let videosShown = videosToShow;
 
     // Initially display only the top 3 videos
@@ -174,14 +174,15 @@ gsap.from(".hero-content",{
 gsap.from(".social-media a ",{
     scale:0,
     opacity:0,
-    duration:1,
+    duration:.7,
     transform:"translateX(-100%)",
     scrollTrigger:{
         trigger: ".social-media a ",
         scroller: "body",
         start: "top 90%",
-        end: "top 55%",
+        end: "top 75%",
         scrub: 2,
+        
         
     }
 })
@@ -196,7 +197,7 @@ gsap.from("#contact-form button",{
         start: "top 90%",
         end: "top 75%",
         scrub: 2,
-        marker: true,
+    
     }
 })
 
