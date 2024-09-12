@@ -321,6 +321,35 @@ iframe {
     display: none;
 }
 
+/* Ensure this part is added to your CSS */
+#show-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#show-more-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#show-more-btn:hover {
+    background-color: #555;
+}
+
+.video-item {
+    display: none; /* Initially hide all videos */
+}
+
+/* Style to make visible videos display properly */
+.video-item.show {
+    display: block;
+}
+
 /* Contact Section */
 #contact{
     background-color: #1f242d;
@@ -470,8 +499,8 @@ footer p{
     }
 
     .logo img {
-        width: 30px;
-        height: 25px;
+        width: 25px;
+        height: 20px;
         margin-left: 23px;
     }
  /* service video */
