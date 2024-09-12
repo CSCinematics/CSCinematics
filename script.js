@@ -174,7 +174,7 @@ gsap.from(".hero-content",{
 gsap.from(".social-media a ",{
     scale:0,
     opacity:0,
-    duration:2,
+    duration:1,
     transform:"translateX(-100%)",
     scrollTrigger:{
         trigger: ".social-media a ",
