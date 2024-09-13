@@ -67,6 +67,9 @@ body {
     margin: 15px 0;
 }
 
+.nav-links .social-media{
+    display:none;
+}
 .nav-links.active {
     display: flex;
 }
@@ -405,7 +408,7 @@ iframe {
 
 /* Contact Section */
 #contact{
-    background-color: #1f242d;
+    background-color:black;
     color:#fff;
     padding: 25px 25px;
 }
@@ -516,7 +519,7 @@ footer p{
     .nav-links {
         display: none; /* Hidden by default */
         flex-direction: column;
-        width: 34vw; /* Full viewport width */
+        width: 64vw; /* Full viewport width */
         height: 100vh; /* Full viewport height */
     
         position: fixed; /* Fixed position to overlay content */
@@ -526,20 +529,34 @@ footer p{
         padding-top: 60px; /* Adjust spacing if needed */
         box-sizing: border-box; /* Ensure padding is included in width/height */
     }
-
+    
     .nav-links.active {
         display: flex; /* Show when active */
-        background-color: #fdfbfb; /* Background color for active menu */
+        background-color: #ff6347; /* Background color for active menu */
     }
 
     .nav-links a {
-        color: black; /* Text color for mobile menu */
+        color: white; /* Text color for mobile menu */
         margin: 25px 0; /* Space between items */
         text-align: center; /* Center text */
         display: block; /* Make links block-level */
     }
+    .nav-links a:hover{
+        color:black; /* Text color for mobile menu */
+        scale: 1.2;
+    }
     nav-links li{
         list-style: none;
+    }
+    
+    .nav-links .social-media{
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .nav-links .social-media:hover{
+        
     }
 
     .hamburger {
