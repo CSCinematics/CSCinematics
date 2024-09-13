@@ -121,6 +121,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
+// Function to create the YouTube player
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-frame', {
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+// Function to go fullscreen
+function requestFullScreen(iframe) {
+    if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+    } else if (iframe.mozRequestFullScreen) { // Firefox
+        iframe.mozRequestFullScreen();
+    } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+        iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) { // IE/Edge
+        iframe.msRequestFullscreen();
+    }
+}
+
+// Detect when the video is playing and go fullscreen
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        var iframe = document.getElementById('video-frame');
+        requestFullScreen(iframe);
+    }
+}
+
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
 
